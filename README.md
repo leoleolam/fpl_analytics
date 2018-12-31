@@ -3,7 +3,7 @@
 
 Analytical library to fetch Fantasy Premier League data, process the data and do some analystics.
 
-#Usage
+##Usage
 
 import fpl_analytics
 
