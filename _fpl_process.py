@@ -81,6 +81,9 @@ def score_detail(fpl_data):
         ts=achived_from(fpl_data, i, True)
         name = (fpl_data["elements"][i]["first_name"]+
                fpl_data["elements"][i]["second_name"])
+
+        if len(ts)==0:
+            continue
         ts=pd.concat([ts,], keys=[name], names=basic_index)
         ele = pos_map(fpl_data)[fpl_data["elements"][i]['element_type']]
         ts=pd.concat([ts,], keys=[ele], names=["pos"]+basic_index)
